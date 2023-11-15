@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layouts.astro";
+import Link from "../components/Link.astro";
+
+const title = "Home";
+---
+
+<Layout title={title}>
+  <p class="tes">Tes CSS</p>
+  <Link link="/about" cssClass="link" content="About" />
+  <Link link="/profile" cssClass="link" content="Profile" />
+</Layout>
+
+<!-- Style di satu file
+<style>
+  .tes {
+    color: red;
+  }
+</style> -->
+
+<!-- Client Side Rendering -->
+<script>
+  console.log("Ini Client Side Rendering");
+</script>
