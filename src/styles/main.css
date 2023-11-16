@@ -3296,6 +3296,17 @@
     color: #E7F6F2;
   }
 
+  .darkmode .btn-outline-dark{
+    background-color: #E7F6F2;
+
+  }
+
+  .darkmode .btn-outline-dark:hover{
+    background-color: #1B2430;
+    color: #E7F6F2;
+    border-color: #E7F6F2;
+  }
+
   .darkmode .header{
     background-color: #1B2430;
     color: #E7F6F2;

@@ -1,0 +1,18 @@
+---
+const { imgSrc, alt, title, content, badge_satu, badge_dua, badge_tiga } = Astro.props;
+---
+
+<div class="col-lg-4 col-sm-12 mb-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+  <div class="post-box">
+    <img src={imgSrc} class="img-fluid" alt={alt} style="border-radius: 5%" />
+    <h3 class="post-title">{title}</h3>
+    <p>
+      {content}
+    </p>
+    <div class="mt-3 d-flex gap-2 justify-content-start flex-wrap">
+      <span class="badge rounded-pill text-bg-primary">{badge_satu}</span>
+      <span class="badge rounded-pill text-bg-primary">{badge_dua}</span>
+      <span class="badge rounded-pill text-bg-primary">{badge_tiga}</span>
+    </div>
+  </div>
+</div>

@@ -7,65 +7,61 @@ import Link from "../components/Link.astro";
 
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top" data-scrollto-offset="0">
-    <div
-      class="container-fluid d-flex align-items-center justify-content-center"
-    >
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li>
-            <Link
-              link="/"
-              cssClass={currentPath === "/" ? "active" : ""}
-              content="Home"
-            />
-          </li>
-          <li>
-            <Link
-              link="/experience"
-              cssClass={currentPath === "/experience" ? "active" : ""}
-              content="Experience"
-            />
-          </li>
-          <li>
-            <Link
-              link="/projects"
-              cssClass={currentPath === "/projects" ? "active" : ""}
-              content="Project"
-            />
-          </li>
-          <li>
-            <Link
-              link="/skills"
-              cssClass={currentPath === "/skills" ? "active" : ""}
-              content="Skills"
-            />
-          </li>
-          <li>
-            <Link
-              link="#"
-              cssClass={currentPath === "#" ? "active" : ""}
-              content="Blog"
-            />
-          </li>
-          <li>
-            <Link
-              link="/contact"
-              cssClass={currentPath === "/contact" ? "active" : ""}
-              content="Hire Me"
-            />
-          </li>
-          <li>
-            <div class="form-check form-switch nav-link scrollto">
-              <input type="checkbox" class="form-check-input" id="checkbox" />
-              <label class="custom-control-label mt-1" for="checkbox"
-                >Dark</label
-              >
-            </div>
-          </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle d-none"></i>
-      </nav>
-      <!-- .navbar -->
-    </div>
-  </header>
-  <!-- End Header -->
+  <div class="container-fluid d-flex align-items-center justify-content-center">
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li>
+          <Link
+            link="/"
+            cssClass={currentPath === "/" ? "active" : ""}
+            content="Home"
+          />
+        </li>
+        <li>
+          <Link
+            link="/experience"
+            cssClass={currentPath === "/experience" ? "active" : ""}
+            content="Experience"
+          />
+        </li>
+        <li>
+          <Link
+            link="/projects"
+            cssClass={currentPath === "/projects" ? "active" : ""}
+            content="Project"
+          />
+        </li>
+        <li>
+          <Link
+            link="/skills"
+            cssClass={currentPath === "/skills" ? "active" : ""}
+            content="Skills"
+          />
+        </li>
+        <li>
+          <Link
+            link="#"
+            cssClass={currentPath === "#" ? "active" : ""}
+            content="Blog"
+          />
+        </li>
+        <li>
+          <Link
+            link="/contact"
+            cssClass={currentPath === "/contact" ? "active" : ""}
+            content="Hire Me"
+          />
+        </li>
+        <li>
+          <div class="form-check form-switch nav-link scrollto">
+            <input type="checkbox" class="form-check-input" id="checkbox" />
+            <label class="custom-control-label mt-1" for="checkbox">Dark</label>
+          </div>
+        </li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle d-none"></i>
+    </nav>
+    <!-- .navbar -->
+  </div>
+</header>
+<!-- End Header -->

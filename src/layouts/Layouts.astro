@@ -6,7 +6,6 @@ import { ViewTransitions } from "astro:transitions";
 import Header from "../layouts/Header.astro";
 
 const { title } = Astro.props;
-
 ---
 
 <html lang="en">
@@ -51,11 +50,10 @@ const { title } = Astro.props;
   <body>
     <!-- ======= Header ======= -->
     <Header />
-
     <slot />
 
     <!-- Preloader -->
-    <!-- <div id="preloader"></div> -->
+    <div id="preloader"></div>
 
     <!-- Template Main JS File -->
     <script>
@@ -64,6 +62,7 @@ const { title } = Astro.props;
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // Get the checkbox
         const checkbox = document.getElementById("checkbox");
 
         // Check if theme is dark in localStorage
