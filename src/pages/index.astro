@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layouts.astro";
-
+import Link from "../components/Link.astro";
 const title = "Home";
 ---
 
@@ -20,7 +20,7 @@ const title = "Home";
         height="200px"
       />
       <h1>Ahmad Nurul Laiq</h1>
-      <h4>Web Developer</h4>
+      <h4>Full Stack Developer</h4>
       <p>
         Hi! I am Ahmad Nurul Laiq, a Laravel developer with experience in
         developing innovative and efficient web solutions. With a deep
@@ -32,10 +32,11 @@ const title = "Home";
       </p>
       <p>If you're ask me about Web Develompent, feel free to Email Me</p>
       <div class="d-flex">
-        <a
-          href="https://drive.google.com/file/d/1vxSs9rOfsVm9oRM3YtR9oOOiucc2W-od/view?usp=sharing"
-          class="btn btn-primary">Download Resume</a
-        >
+        <Link
+          link="https://drive.google.com/file/d/1vxSs9rOfsVm9oRM3YtR9oOOiucc2W-od/view?usp=sharing"
+          cssClass="btn btn-primary"
+          content="Download Resume"
+        />
       </div>
     </div>
   </section>
