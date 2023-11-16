@@ -1,53 +1,54 @@
 ---
 import Layout from "../layouts/Layouts.astro";
+import ExperienceCard from "../components/ExperienceCard.astro";
 const title = "Experience";
 ---
 
 <Layout title={title}>
-  <section id="recent-blog-posts" class="recent-blog-posts d-flex align-items-center mt-5">
-
+  <section
+    id="recent-blog-posts"
+    class="recent-blog-posts d-flex align-items-center mt-5"
+  >
     <div class="container aos-init aos-animate" data-aos="fade-up">
       <h1 class="text-center mb-5" style="font-size: 64px;">Experience</h1>
-      
-      <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-        <div class="flex-grow-1">
-          <h2 class="mb-0">Full Stack Developer</h2>
-          <div class="subheading mb-3">CV. Aliansyah — Pati, Central Java, ID</div>
-          <p>• Redeveloped exiting system to support store, warehouse, and finance</p>
-          <p>• Build and test new website fiture</p>
-          <p>• Develop and maintenance 10+ website using PHP and Javascript</p>
-          <p>• Optimized SQL Query for the heavy-load parts of the system, which improved website
-            performance by 30%</p>
-          </p>
-        </div>
-        <div class="flex-shrink-0"><span class="text-primary">Sep 2022 - Now</span></div>
-      </div>
 
-      <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-        <div class="flex-grow-1">
-          <h2 class="mb-0">Independent Study about Artificial Intelligence Mastery Program</h2>
-          <div class="subheading mb-3">Orbit Future Academy</div>
-          <p>• Participant of Kampus Merdeka In Study Independent Program Batch 2</p>
-          <p>• I study about Deep Learning, Data Science, Natural Language Processing, Computer
-            Vision, Reinforcement Learning, and Version Control System</p>
-        </div>
-        <div class="flex-shrink-0"><span class="text-primary">March 2022 - Jul 2022</span></div>
-      </div>
+      <ExperienceCard
+        title="Full Stack Developer"
+        companyName="CV. Aliansyah"
+        companyLocation="Pati, Central Java, ID"
+        description1={`• Responsible for designing, developing, and maintaining a web application used by more than 50+ active users on a regular
+      basis.`}
+        description2={`• Integrating external APIs and third-party services to enhance the application's functionality and support the growth of active
+      users`}
+        description3={`• Responsible for brainstorming, developing, testing, collaborating, code reviewing, debugging, and deploying. (GitHub,
+          CI/CD, Unit Test, RESTful API Client)`}
+        description4={`• Optimized SQL Query for the heavy-load parts of the system, which improved website performance by 30% (Eager
+          Loading, Reducing Query, Caching, Queue, Load Balancing)`}
+        description5={`• Conducting regular monitoring and maintenance, as well as responding to user feedback to address weaknesses and improve
+          features.`}
+        duration="Sep 2022 - Present"
+      />
+      <ExperienceCard
+        title="Independent Study about Artificial Intelligence Mastery Program"
+        companyName="Orbit Future Academy"
+        companyLocation="Online"
+        description1={`• Participant of Kampus Merdeka In Study Independent Program Batch 2`}
+        description2={`• I study about Deep Learning, Data Science, Natural Language Processing, Computer Vision, Reinforcement Learning, and Version Control System`}
+        duration="March 2022 - Jul 2022"
+      />
 
-      <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-        <div class="flex-grow-1">
-          <h2 class="mb-0">Mobile Developer</h2>
-          <div class="subheading mb-3">PT PJB UBJOM Rembang (Internship) — Rembang, Central Java, ID</div>
-          <p>• Work together with different teams to deliver high-quality software</p>
-          <p>• Monitor the process of running the application and resolve errors in the application</p>
-          <p>• Integrated REST API from backend to mobile aplications</p>
-          <p>• Development application using Flutter</p>
-          <p>• Design UI and UX application with usability testing</p>
-        </div>
-        <div class="flex-shrink-0"><span class="text-primary">Sep 2021 - Nov 2021</span></div>
-      </div>
-
+      <ExperienceCard
+        title="Mobile Developer"
+        companyName="PT PJB UBJOM Rembang (Internship)"
+        companyLocation="Rembang, Central Java, ID"
+        description1={`• Work together with different teams to deliver high-quality software`}
+        description2={`• Monitor the process of running the application and resolve errors in the application`}
+        description3={`• Integrated REST API from backend to mobile aplications`}
+        description4={`• Development application using Flutter`}
+        description5={`• Design UI and UX application with usability testing`}
+        duration="Sep 2021 - Nov 2021"
+      />
     </div>
-
   </section>
 </Layout>
+../components/ExperienceCard.tsx

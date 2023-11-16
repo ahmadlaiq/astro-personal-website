@@ -1,0 +1,31 @@
+---
+const {
+  title,
+  companyName,
+  companyLocation,
+  description1,
+  description2,
+  description3,
+  description4,
+  description5,
+  duration,
+} = Astro.props;
+---
+
+<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+  <div class="flex-grow-1">
+    <h2 class="mb-0">{title}</h2>
+    <div class="subheading mb-3">{companyName} — {companyLocation}</div>
+    <div style="text-align: justify;
+    text-justify: inter-word">
+      <p>{description1}</p>
+      <p>{description2}</p>
+      <p>{description3}</p>
+      <p>{description4}</p>
+      <p>{description5}</p>
+    </div>
+  </div>
+  <div class="flex-shrink-0" style="padding-left: 10%;">
+    <span class="text-primary">{duration}</span>
+  </div>
+</div>
