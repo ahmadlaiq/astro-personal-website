@@ -1,24 +1,42 @@
 ---
 import Layout from "../layouts/Layouts.astro";
-import Link from "../components/Link.astro";
 
 const title = "Home";
 ---
 
 <Layout title={title}>
-  <p class="tes">Tes CSS</p>
-  <Link link="/about" cssClass="link" content="About" />
-  <Link link="/profile" cssClass="link" content="Profile" />
+  <section id="hero-animated" class="d-flex align-items-center mt-5">
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
+      data-aos="zoom-out"
+    >
+      <img
+        src="assets/img/laiq.jpg"
+        class="animated"
+        style="
+            border-radius: 50%;
+            animation: up-down 2s ease-in-out infinite alternate-reverse both;
+          "
+        height="200px"
+      />
+      <h1>Ahmad Nurul Laiq</h1>
+      <h4>Web Developer</h4>
+      <p>
+        Hi! I am Ahmad Nurul Laiq, a Laravel developer with experience in
+        developing innovative and efficient web solutions. With a deep
+        understanding of the MVC concept and experience in building complex
+        database-driven applications, I am passionate about delivering
+        high-quality and easy-to-use products. I believe in solid team
+        collaboration and good communication, and am always eager to learn and
+        stay abreast of the latest technology in the world of web development.
+      </p>
+      <p>If you're ask me about Web Develompent, feel free to Email Me</p>
+      <div class="d-flex">
+        <a
+          href="https://drive.google.com/file/d/1vxSs9rOfsVm9oRM3YtR9oOOiucc2W-od/view?usp=sharing"
+          class="btn btn-primary">Download Resume</a
+        >
+      </div>
+    </div>
+  </section>
 </Layout>
-
-<!-- Style di satu file
-<style>
-  .tes {
-    color: red;
-  }
-</style> -->
-
-<!-- Client Side Rendering -->
-<script>
-  console.log("Ini Client Side Rendering");
-</script>

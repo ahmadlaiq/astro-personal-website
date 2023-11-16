@@ -1,21 +1,194 @@
 ---
-const { title } = Astro.props;
-import "../styles/global.css";
----
+//Import CSS file
+import "../styles/main.css";
+import "../styles/variables.css";
 
+//Import Transitions
+import { ViewTransitions } from "astro:transitions";
+
+//Highlight Nav Link
+const currentPath = Astro.url.pathname;
+//title
+const { title } = Astro.props;
+//components
+import Link from "../components/Link.astro";
+---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title} | Ahmad Nurul Laiq</title>
-  </head>
-  <body>
-    <h1>{title}</h1>`
-    <slot>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    </slot>
+    <title>{title} | Ahmad Nurul Laiq</title>
+
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <!-- <ViewTransitions /> -->
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link type="image/svg+xml" href="/favicon.svg" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top" data-scrollto-offset="0">
+      <div
+        class="container-fluid d-flex align-items-center justify-content-center"
+      >
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li>
+              <Link
+                link="/"
+                cssClass={currentPath === "/" ? "active" : ""}
+                content="Home"
+              />
+            </li>
+            <li>
+              <Link
+                link="/experience"
+                cssClass={currentPath === "/experience" ? "active" : ""}
+                content="Experience"
+              />
+            </li>
+            <li>
+              <Link
+                link="/projects"
+                cssClass={currentPath === "/projects" ? "active" : ""}
+                content="Project"
+              />
+            </li>
+            <li>
+              <Link
+                link="/skills"
+                cssClass={currentPath === "/skills" ? "active" : ""}
+                content="Skills"
+              />
+            </li>
+            <li>
+              <Link
+                link="#"
+                cssClass={currentPath === "#" ? "active" : ""}
+                content="Blog"
+              />
+            </li>
+            <li>
+              <Link
+                link="/contact"
+                cssClass={currentPath === "/contact" ? "active" : ""}
+                content="Hire Me"
+              />
+            </li>
+            <li>
+              <div class="form-check form-switch nav-link scrollto">
+                <input type="checkbox" class="form-check-input" id="checkbox" />
+                <label class="custom-control-label mt-1" for="checkbox"
+                  >Dark</label
+                >
+              </div>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle d-none"></i>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <slot />
+
+    <!-- Preloader -->
+    <!-- <div id="preloader"></div> -->
+
+    <!-- Template Main JS File -->
+    <script>
+      import "../scripts/main.js";
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const checkbox = document.getElementById("checkbox");
+
+        // Check if theme is dark in localStorage
+        if (localStorage.getItem("theme") === "dark") {
+          setDarkMode();
+
+          // Check if checkbox was checked when dark mode was set
+          const checkbox = document.getElementById(
+            "checkbox"
+          ) as HTMLInputElement;
+          if (checkbox && checkbox.checked) {
+            localStorage.setItem("checkbox", "true");
+          }
+        }
+
+        // Event listener for checkbox change
+        if (checkbox) {
+          checkbox.addEventListener("change", function () {
+            setDarkMode();
+          });
+        }
+
+        // Function to set dark mode
+        function setDarkMode() {
+          console.log("setDarkMode");
+          let isDark = document.body.classList.toggle("darkmode");
+
+          if (isDark) {
+            if (checkbox) {
+              const checkbox = document.getElementById(
+                "checkbox"
+              ) as HTMLInputElement;
+              if (checkbox) {
+                checkbox.checked = true;
+              }
+            }
+            localStorage.setItem("theme", "dark");
+          } else {
+            if (checkbox) {
+              const checkbox = document.getElementById(
+                "checkbox"
+              ) as HTMLInputElement;
+              checkbox.checked = false;
+            }
+            localStorage.removeItem("theme");
+          }
+        }
+      });
+    </script>
+
+    <!-- Vendor JS Files -->
+    <script is:inline src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"
+    ></script>
+    <script is:inline src="assets/vendor/aos/aos.js"></script>
+    <script is:inline src="assets/vendor/glightbox/js/glightbox.min.js"
+    ></script>
+    <script is:inline src="assets/vendor/isotope-layout/isotope.pkgd.min.js"
+    ></script>
+    <script is:inline src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
