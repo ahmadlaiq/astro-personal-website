@@ -17,7 +17,7 @@ const { title } = Astro.props;
 
     <meta content="" name="description" />
     <meta content="" name="keywords" />
-    <!-- <ViewTransitions /> -->
+    <ViewTransitions />
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -52,16 +52,64 @@ const { title } = Astro.props;
     <Header />
     <slot />
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
-
     <!-- Template Main JS File -->
     <script>
       import "../utils/main.js";
     </script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener("DOMContentLoaded", function () {
+        // Get the checkbox
+        const checkbox = document.getElementById("checkbox");
+
+        // Check if theme is dark in localStorage
+        if (localStorage.getItem("theme") === "dark") {
+          setDarkMode();
+
+          // Check if checkbox was checked when dark mode was set
+          const checkbox = document.getElementById(
+            "checkbox"
+          ) as HTMLInputElement;
+          if (checkbox && checkbox.checked) {
+            localStorage.setItem("checkbox", "true");
+          }
+        }
+
+        // Event listener for checkbox change
+        if (checkbox) {
+          checkbox.addEventListener("change", function () {
+            setDarkMode();
+          });
+        }
+
+        // Function to set dark mode
+        function setDarkMode() {
+          console.log("setDarkMode");
+          let isDark = document.body.classList.toggle("darkmode");
+
+          if (isDark) {
+            if (checkbox) {
+              const checkbox = document.getElementById(
+                "checkbox"
+              ) as HTMLInputElement;
+              if (checkbox) {
+                checkbox.checked = true;
+              }
+            }
+            localStorage.setItem("theme", "dark");
+          } else {
+            if (checkbox) {
+              const checkbox = document.getElementById(
+                "checkbox"
+              ) as HTMLInputElement;
+              checkbox.checked = false;
+            }
+            localStorage.removeItem("theme");
+          }
+        }
+      });
+
+      document.addEventListener("astro:after-swap", function () {
         // Get the checkbox
         const checkbox = document.getElementById("checkbox");
 

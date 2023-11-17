@@ -1,6 +1,11 @@
 ---
 import Layout from "../layouts/Layouts.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import PPDB from "../assets/img/PPDB-PPS-Fathul-Ulum.png";
+import Budayaku from "../assets/img/budayaku.png";
+import Uisi from "../assets/img/uisi-lapor.jpeg";
+import Alter from "../assets/img/alter-admin.png";
+import Wild from "../assets/img/wild_vs_nowild.jpg";
 const title = "Project";
 ---
 
@@ -13,7 +18,7 @@ const title = "Project";
       <h1 class="text-center mb-5" style="font-size: 64px;">Project</h1>
       <div class="row">
         <ProjectCard
-          imgSrc="assets/img/PPDB-PPS-Fathul-Ulum.png"
+          imgSrc={PPDB}
           alt="PPDB PPS Fathul Ulum"
           title="PPDB PPS Fathul Ulum"
           content="PPDB PPS Fathul Ulum is a service system designed to facilitate \
@@ -25,7 +30,7 @@ const title = "Project";
           badge_tiga="MySQL"
         />
         <ProjectCard
-          imgSrc="assets/img/budayaku.png"
+          imgSrc={Budayaku}
           alt="Budayaku"
           title="Budayaku"
           content="Budayaku is a website that is expected to become the center of \
@@ -39,7 +44,7 @@ const title = "Project";
         />
 
         <ProjectCard
-          imgSrc="assets/img/uisi-lapor.jpeg"
+          imgSrc={Uisi}
           alt="UISI Lapor"
           title="UISI Lapor"
           content="UISI Report is a website that is used to report all problems on \
@@ -51,7 +56,7 @@ const title = "Project";
         />
 
         <ProjectCard
-          imgSrc="assets/img/alter-admin.png"
+          imgSrc={Alter}
           alt="Alter Admin"
           title="Alter Admin"
           content="Alter Admin is Point of Sale (POS) System is basically a \
@@ -63,7 +68,7 @@ const title = "Project";
         />
 
         <ProjectCard
-          imgSrc="assets/img/wild_vs_nowild.jpg"
+          imgSrc={Wild}
           alt="Wild vs No Wild Classification"
           title="Wild vs No Wild Classification"
           content="Wild vs No Wild : Flask app Using Convolutional Neural Network \

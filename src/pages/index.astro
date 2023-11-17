@@ -1,6 +1,9 @@
 ---
 import Layout from "../layouts/Layouts.astro";
 import Link from "../components/Link.astro";
+import Laiq from "../assets/img/laiq.webp";
+import { Image } from "astro:assets";
+
 const title = "Home";
 ---
 
@@ -10,16 +13,13 @@ const title = "Home";
       class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
       data-aos="zoom-out"
     >
-      <img
-        src="assets/img/laiq.webp"
-        class="animated"
-        style="
-        border-radius: 50%;
-        animation: up-down 2s ease-in-out infinite alternate-reverse both;
-      "
-        height="200px"
-        loading="lazy"
-        decoding="async"
+      <Image
+        src={Laiq}
+        alt="Ahmad Nurul Laiq"
+        class="img-fluid Laiq"
+        width="200"
+        height="200"
+        style="border-radius: 50%"
       />
 
       <h1>Ahmad Nurul Laiq</h1>
@@ -44,3 +44,9 @@ const title = "Home";
     </div>
   </section>
 </Layout>
+
+<style>
+  .Laiq {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  }
+</style>
