@@ -7,12 +7,15 @@ const { link, alt, content } = Astro.props;
   data-aos="zoom-out"
 >
   <div class="service-item position-relative" style="border-radius: 5%">
-    <img
-      src={link}
-      alt={alt}
-      style="max-width: 100%;
-                height: 64px; object-fit: cover;"
-    />
+    <img src={link} alt={alt} class="skills-img" />
     <h4 class="mt-2">{content}</h4>
   </div>
 </div>
+
+<style>
+  .skills-img {
+    max-width: 100%;
+    height: 64px;
+    object-fit: cover;
+  }
+</style>
