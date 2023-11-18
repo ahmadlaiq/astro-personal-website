@@ -17,6 +17,7 @@ import VueJS from "../assets/img/logo_vuejs.svg";
 import AstroJS from "../assets/img/logo_astro.svg";
 import MySQL from "../assets/img/logo_mysql.svg";
 import PostgreSQL from "../assets/img/logo_postgresql.svg";
+import Docker from "../assets/img/logo_docker.svg";
 const title = "Skills";
 ---
 
@@ -28,36 +29,35 @@ const title = "Skills";
     <div class="container">
       <h1 class="text-center mb-5" style="font-size: 64px;">Skills</h1>
       <div class="row gy-4">
-        <SkillsCard link={Bootstrap.src} alt="Boosttrap" content="Boosttrap" />
-        <SkillsCard link={CSS.src}alt="CSS" content="CSS" />
         <SkillsCard
-          link={Figma.src}
+        link={Figma.src}
           alt="Figma"
           content="Figma"
         />
         <SkillsCard link={HTML.src} alt="HTML" content="HTML" />
-        <SkillsCard
-          link={Laravel.src}
-          alt="Laravel"
-          content="Laravel"
-        />
+        <SkillsCard link={CSS.src}alt="CSS" content="CSS" />
+        <SkillsCard link={Bootstrap.src} alt="Boosttrap" content="Boosttrap" />
         <SkillsCard link={PHP.src} alt="PHP" content="PHP" />
+        <SkillsCard
+        link={Laravel.src}
+        alt="Laravel"
+        content="Laravel"
+        />
         <SkillsCard link={Dart.src} alt="Dart" content="Dart" />
         <SkillsCard
           link={Flutter.src}
           alt="Flutter"
           content="Flutter"
         />
-        <SkillsCard link={GIT.src} alt="GIT" content="GIT" />
         <SkillsCard
-          link={Python.src}
-          alt="Python"
-          content="Python"
+        link={Python.src}
+        alt="Python"
+        content="Python"
         />
         <SkillsCard
-          link={Javascript.src}
-          alt="Javascript"
-          content="Javascript"
+        link={Javascript.src}
+        alt="Javascript"
+        content="Javascript"
         />
         <SkillsCard
           link={Inertia.src}
@@ -84,6 +84,8 @@ const title = "Skills";
           alt="PostgreSQL"
           content="PostgreSQL"
         />
+        <SkillsCard link={GIT.src} alt="GIT" content="GIT" />
+        <SkillsCard link={Docker.src} alt="Docker" content="Docker" />
       </div>
     </div>
   </section>
