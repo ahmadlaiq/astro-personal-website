@@ -1,0 +1,47 @@
+---
+import Link from "../components/Link.astro";
+import Laiq from "../assets/img/laiq.webp";
+import { Image } from "astro:assets";
+---
+
+<section id="hero-animated" class="d-flex align-items-center mt-5">
+  <div
+    class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
+    data-aos="zoom-out"
+  >
+    <Image
+      src={Laiq}
+      alt="Ahmad Nurul Laiq"
+      class="img-fluid Laiq"
+      width="200"
+      height="200"
+      style="border-radius: 50%"
+    />
+
+    <h1>Ahmad Nurul Laiq</h1>
+    <h4>Full Stack Developer</h4>
+    <p>
+      Hi! I am Ahmad Nurul Laiq, a Laravel developer with experience in
+      developing innovative and efficient web solutions. With a deep
+      understanding of the MVC concept and experience in building complex
+      database-driven applications, I am passionate about delivering
+      high-quality and easy-to-use products. I believe in solid team
+      collaboration and good communication, and am always eager to learn and
+      stay abreast of the latest technology in the world of web development.
+    </p>
+    <p>If you're ask me about Web Develompent, feel free to Email Me</p>
+    <div class="d-flex">
+      <Link
+        link="https://drive.google.com/file/d/1vxSs9rOfsVm9oRM3YtR9oOOiucc2W-od/view?usp=sharing"
+        cssClass="btn btn-outline-dark btn-lg"
+        content="Download Resume"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .Laiq {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  }
+</style>

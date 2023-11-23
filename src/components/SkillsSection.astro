@@ -1,0 +1,94 @@
+---
+import SkillsCard from "../components/SkillsCard.astro";
+import Bootstrap from "../assets/img/logo_boosttrap.svg";
+import CSS from "../assets/img/logo_css.svg";
+import Figma from "../assets/img/logo_figma.svg";
+import HTML from "../assets/img/logo_html.svg";
+import Laravel from "../assets/img/logo_laravel.svg";
+import PHP from "../assets/img/logo_php.svg";
+import Dart from "../assets/img/logo_dart.svg";
+import Flutter from "../assets/img/logo_flutter.svg";
+import GIT from "../assets/img/logo_git.svg";
+import Python from "../assets/img/logo_python.svg";
+import Javascript from "../assets/img/logo_javascript.svg";
+import JQuery from "../assets/img/logo_jquery.svg";
+import Inertia from "../assets/img/logo_inertia.png";
+import VueJS from "../assets/img/logo_vuejs.svg";
+import AstroJS from "../assets/img/logo_astro.svg";
+import MySQL from "../assets/img/logo_mysql.svg";
+import PostgreSQL from "../assets/img/logo_postgresql.svg";
+import Docker from "../assets/img/logo_docker.svg";
+---
+
+<section
+id="skills"
+class="featured-services d-flex align-items-center mt-5"
+>
+<div class="container">
+  <h1 class="text-center mb-5" style="font-size: 64px;">Skills</h1>
+  <div class="row gy-4">
+    <SkillsCard
+    link={Figma.src}
+      alt="Figma"
+      content="Figma"
+    />
+    <SkillsCard link={HTML.src} alt="HTML" content="HTML" />
+    <SkillsCard link={CSS.src}alt="CSS" content="CSS" />
+    <SkillsCard link={Bootstrap.src} alt="Boosttrap" content="Boosttrap" />
+    <SkillsCard link={PHP.src} alt="PHP" content="PHP" />
+    <SkillsCard
+    link={Laravel.src}
+    alt="Laravel"
+    content="Laravel"
+    />
+    <SkillsCard link={Dart.src} alt="Dart" content="Dart" />
+    <SkillsCard
+      link={Flutter.src}
+      alt="Flutter"
+      content="Flutter"
+    />
+    <SkillsCard
+    link={Python.src}
+    alt="Python"
+    content="Python"
+    />
+    <SkillsCard
+    link={Javascript.src}
+    alt="Javascript"
+    content="Javascript"
+    />
+    <SkillsCard
+    link={JQuery.src}
+    alt="JQuery"
+    content="JQuery"
+    />
+    <SkillsCard
+      link={Inertia.src}
+      alt="InertiaJS"
+      content="InertiaJS"
+    />
+    <SkillsCard
+      link={VueJS.src}
+      alt="VueJS"
+      content="VueJS"
+    />
+    <SkillsCard
+      link={AstroJS.src}
+      alt="AstroJS"
+      content="AstroJS"
+    />
+    <SkillsCard
+      link={MySQL.src}
+      alt="MySQL"
+      content="MySQL"
+    />
+    <SkillsCard
+      link={PostgreSQL.src}
+      alt="PostgreSQL"
+      content="PostgreSQL"
+    />
+    <SkillsCard link={GIT.src} alt="GIT" content="GIT" />
+    <SkillsCard link={Docker.src} alt="Docker" content="Docker" />
+  </div>
+</div>
+</section>
