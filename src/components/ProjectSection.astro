@@ -5,6 +5,9 @@ import Budayaku from "../assets/img/budayaku.png";
 import Uisi from "../assets/img/uisi-lapor.jpeg";
 import Alter from "../assets/img/alter-admin.png";
 import Wild from "../assets/img/wild_vs_nowild.jpg";
+import QRSticker from "../assets/img/gudang_al.png";
+import POSTTB from "../assets/img/kasir_ttb.png";
+import PayrollEmailBlast from "../assets/img/appscript-payroll-email-blast.png";
 ---
 
 <section
@@ -14,6 +17,38 @@ import Wild from "../assets/img/wild_vs_nowild.jpg";
     <div class="container aos-init aos-animate" data-aos="fade-up">
       <h1 class="text-center mb-5" style="font-size: 64px;">Project</h1>
       <div class="row">
+        <ProjectCard
+          imgSrc={PayrollEmailBlast}
+          alt="Payroll Email Blast"
+          title="Payroll Email Blast"
+          content="Payroll Email Blast is a Google App Script that is used to send \
+          payroll reports to all employees in the company."
+          badge_satu="Google App Script"
+          badge_dua="Google Sheet"
+          badge_tiga="Gmail"
+        />
+        <ProjectCard
+          imgSrc={QRSticker}
+          alt="QR Sticker"
+          title="QR Sticker"
+          content="QR Sticker is a web application that is used to print QR code \
+          stickers in bulk. This application is used to print QR code stickers \
+          for the needs of the company's warehouse."
+          badge_satu="Laravel"
+          badge_dua="Bootstrap"
+          badge_tiga="MySQL"
+        />
+        <ProjectCard
+          imgSrc={POSTTB}
+          alt="POS TTB"
+          title="POS TTB"
+          content="POS TTB is a web application that is used to record all \
+          transactions in the brand store. This application is used to support \
+          the needs of the company's brand store."
+          badge_satu="Laravel"
+          badge_dua="Bootstrap"
+          badge_tiga="MySQL"
+        />
         <ProjectCard
           imgSrc={PPDB}
           alt="PPDB PPS Fathul Ulum"
